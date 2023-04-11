@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Tahoma, sans-serif;
+  background-image:url();
+  background-repeat: no-repeat, repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+.control-buttons {
+ position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(164, 3, 244, 0.9);
+}
+.control-buttons span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #791582;
+  color: #FFF;
+  padding: 23px 25px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 80px;
+  width: 300px;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  -ms-transition: -ms-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;  
+  text-shadow: 7px 7px 18px white;
+}
+.control-buttons span:hover{
+
+    transform:rotate(360deg);
+    -ms-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+
+}
+.info-container {
+  width: 1080px;
+  margin: 20px auto 0;
+  background-color: #F6F6F6;
+  padding: 20px;
+  font-size: 24px;
+  overflow: hidden; 
+  border: 5px solid #791582;
+  border-radius: 30px;
+  height: 150px;
+  box-shadow: inset 0px 0px 20px #0b010b;
+}
+.info-container .name {
+  float: left;
+  width: 50%;
+  color: #791582;
+  text-shadow: 5px 5px 10px rgb(194, 21, 217);
+}
+.info-container .tries {
+  float: right;
+  width: 50%;
+  text-align: right;
+  color: #d21200;
+  text-shadow: 5px 5px 10px rgb(207, 40, 40);
+}
+.info-container .time {
+  float: left;
+  width: 50%;
+  position: relative;
+  top: 10px;
+  color: #791582;
+}
+.info-container .score {
+  float: right;
+  width: 50%;
+  text-align: right;
+  position: relative;
+  top: 10px;
+  color: #791582;
+}
+.info-container .message{
+  float: left;
+  width:100%;
+  position: relative;
+  top: 20px;
+  text-align: center;
+  color: #791582;
+}
+
+.memory-game-blocks {
+  display: flex;  
+  width: 1100px;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+.memory-game-blocks.no-clicking {
+  pointer-events: none;
+}
+.memory-game-blocks .game-block {
+  height: 200px;
+  transition: transform .5s;
+  transform-style: preserve-3d;  
+  cursor: pointer;
+  position: relative;
+  flex: 1 0 200px;
+  margin: 0 10px 20px;
+
+}
+.memory-game-blocks .game-block .front {
+  background-color: #333;
+  line-height: 200px;
+}
+.memory-game-blocks .game-block .front:before {
+  content: 'Guess';
+  color: #FFF;
+  font-size: 50px;
+  font-weight: bold;
+  
+  
+}
+.memory-game-blocks .game-block .back {
+  background-color: #290148;
+  transform: rotateY(180deg);
+}
+.memory-game-blocks .game-block .back img {
+  width: 140px;
+  height: 140px;
+  margin-top: 30px;
+}
+.memory-game-blocks .game-block .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+  border: 5px solid #791582;
+  border-radius: 80px;
+}
+.memory-game-blocks .game-block.is-flipped,
+.memory-game-blocks .game-block.has-match {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  pointer-events: none;
+}
+
+
+
+
+/* gameover div */
+.controltwo-buttons {
+ position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color: rgba(164, 3, 244, 0.9);
+}
+
+/* gameover span */
+
+.controltwo-buttons span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #791582;
+  color: #FFF;
+  padding: 23px 25px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 80px;
+  width: 300px;
+
+}
+
+/* GameWin div */
+.controlthree-buttons {
+ position: fixed; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  background-color:rgb(240, 240, 240,0.8);
+  border-radius: 10px;
+
+}
+
+/* GameWin span */
+.controlthree-buttons span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #e9019b;
+  color: #FFF;
+  padding: 30px 25px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+  height: 100px;
+}
+

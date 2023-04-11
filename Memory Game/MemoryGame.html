@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="MemoryGame.css">
+  <link rel="stylesheet" href="Css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<style>
+
+
+.flex-container {
+			display: flex;
+			flex-wrap: wrap;
+			
+		}
+
+		.flex-container>div {
+			text-align: center;
+			flex-wrap: wrap;
+		}
+		
+		
+</style>
+
+
+
+
+
+</head>
+
+<body>
+  <header>
+
+    <ul class="header">
+        <li> <a href="LandingPage.html" style =" font-size: 50px;"><i class="fa-solid fa-house" id="id1"></i> </a> </li>
+    </ul>
+
+</header>
+<main class="flex-container">
+  <div class="control-buttons">
+    <span>Start Game</span>
+  </div>
+  <div id="Levels">
+    <h4 id="choose">Please Choose Level</h4>
+    <button onclick="Hard()" id="btn1">Hard</button>
+    <button onclick="Easy()" id="btn2"> Easy</button>
+    <button onclick="Normal()" id="btn3"> Normal</button>
+  </div>
+  <br>
+  <div class="info-container">
+   
+    <div class="name">
+      Hello: <span></span>
+    </div>
+    <div class="tries">
+      Wrong Tries: <span>0</span>
+    </div>
+    <div class="time">Time Left: <span></span> Seconds
+      <i class="fa-regular fa-hourglass-half" style="font-size: 30px;color:#791582"></i>
+    </div>
+    <div class="score">
+      Score: <span class="got">0</span> From 10</span>
+    </div>
+    <div class="message">
+      You Are Playing On <span>(<span class="lvl"></span>)</span> Level
+      & You Have <span class="seconds"> </span> Seconds To Select The Matching Cards
+    </div>
+  </div>
+  
+    <div class="memory-game-blocks">
+      <div class="game-block" data-technology="angular">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/A.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="angular">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/A.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="vuejs">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/B.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="vuejs">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/B.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="css3">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/C.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="css3">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/C.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="github">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/D.jfif" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="github">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/D.jfif" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="gulpjs">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/E.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="gulpjs">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/E.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="html5">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/F.jpeg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="html5">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/F.jpeg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="jest">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/G.JPG" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="jest">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/G.JPG" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="mongodb">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/H.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="mongodb">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/H.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="python">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/i.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="python">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/i.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="react">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/j.jpg" alt="">
+        </div>
+      </div>
+      <div class="game-block" data-technology="react">
+        <div class="face front"></div>
+        <div class="face back">
+          <img src="imgs/j.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <audio id="Start" src="audio/Harry potter - BGM.mp3" preload="auto"></audio>
+  <audio id="success" src="audio/Yupiiii.mp3" preload="auto"></audio>
+  <audio id="fail" src="audio/Oh_no.mp3" preload="auto"></audio>
+  <audio id="lose" src="audio/Failed_Sound.mp3" preload="auto"></audio>
+  <audio id="win" src="audio/Win%20Sound.mpeg" preload="auto"></audio>
+
+
+  <script src="MemoryGame.js"></script>
+</body>
+
+</html>
